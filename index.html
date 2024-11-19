@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farbmodell - Alice und Bob</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Farbmodell: Alice und Bob</h1>
+
+    <!-- Öffentliche Farbe -->
+
+    <div class="container">
+        <!-- Alice -->
+        <div class="mixer">
+            <h2>Alice </h2>
+            <h4>Geheime Farbe</h4>
+            <div class="slider-container">
+                <label for="aliceRed">Rot: </label>
+                <input type="range" id="aliceRed" min="0" max="255" value="0" oninput="updateAliceColor()">
+                <span id="aliceRedValue">0</span>
+            </div>
+            <div class="slider-container">
+                <label for="aliceGreen">Grün: </label>
+                <input type="range" id="aliceGreen" min="0" max="255" value="0" oninput="updateAliceColor()">
+                <span id="aliceGreenValue">0</span>
+            </div>
+            <div class="slider-container">
+                <label for="aliceBlue">Blau: </label>
+                <input type="range" id="aliceBlue" min="0" max="255" value="255" oninput="updateAliceColor()">
+                <span id="aliceBlueValue">0</span>
+            </div>
+            <div id="aliceColorBox" class="color-box"></div>
+            <br>
+            <div class="semi-public-alice">
+                <h4>Mischfarbe</h4>
+                <div id="aliceMixedColorBox" class="color-box"><span>geheim + <br>öffentlich</span></div>
+            </div>
+            <br>
+            <h4>Finale Farbe</h4>
+            <div id="aliceFinalColorBox" class="color-box"><span>Bob's Mischfarbe +<br>Alice Geheimfarbe</span></div>
+        </div>
+        <!--Eve -->
+        <div class="mixer">
+            <h2>Eve</h2>
+            <h4>Öffentliche Farbe</h4>
+            <div class="slider-container">
+                <label for="publicRed">Rot: </label>
+                <input type="range" id="publicRed" min="0" max="255" value="255" oninput="updatePublicColor()">
+                <span id="publicRedValue">128</span>
+            </div>
+            <div class="slider-container">
+                <label for="publicGreen">Grün: </label>
+                <input type="range" id="publicGreen" min="0" max="255" value="0" oninput="updatePublicColor()">
+                <span id="publicGreenValue">128</span>
+            </div>
+            <div class="slider-container">
+                <label for="publicBlue">Blau: </label>
+                <input type="range" id="publicBlue" min="0" max="255" value="0" oninput="updatePublicColor()">
+                <span id="publicBlueValue">128</span>
+            </div>
+
+            <div id="publicColorBox" class="color-box"></div>
+        </div>
+        <!-- Bob -->
+        <div class="mixer">
+            <h2>Bob</h2>
+            <h4>Geheime Farbe</h4>
+            <div class="slider-container">
+                <label for="bobRed">Rot: </label>
+                <input type="range" id="bobRed" min="0" max="255" value="0" oninput="updateBobColor()">
+                <span id="bobRedValue">0</span>
+            </div>
+            <div class="slider-container">
+                <label for="bobGreen">Grün: </label>
+                <input type="range" id="bobGreen" min="0" max="255" value="255" oninput="updateBobColor()">
+                <span id="bobGreenValue">0</span>
+            </div>
+            <div class="slider-container">
+                <label for="bobBlue">Blau: </label>
+                <input type="range" id="bobBlue" min="0" max="255" value="0" oninput="updateBobColor()">
+                <span id="bobBlueValue">0</span>
+            </div>
+            <div id="bobColorBox" class="color-box"></div>
+            <br>
+            <div class="semi-public-bob">
+                <h4>Mischfarbe</h4>
+                <div id="bobMixedColorBox" class="color-box"><span>geheim + <br>öffentlich</span></div>
+            </div>
+            <br>
+            <h4>Finale Farbe</h4>
+            <div id="bobFinalColorBox" class="color-box"><span>Alice Mischfarbe +<br>Bob's Geheimfarbe</span></div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
