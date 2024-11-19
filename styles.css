@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.mixer {
+    text-align: center;
+}
+.slider-container {
+    margin: 10px;
+}
+.color-box {
+    width: 150px;
+    height: 150px;
+    margin: 20px auto;
+    border: 1px solid #000;
+    display: flex;               /* Flexbox aktivieren */
+    justify-content: center;     /* Horizontal zentrieren */
+    align-items: center;         /* Vertikal zentrieren */
+    font-weight: bold;           /* Fettschrift */
+}
+.semi-public-alice {
+    position: relative;
+    left: 50%;
+}
+
+.semi-public-bob {
+    
+    position: relative;
+    right: 50%;
+
+}
