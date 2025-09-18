@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Meine Svelte Web Component</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 2rem;
+      background: #f7f7f7;
+    }
+    div{
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+  <h1>Demo: Eingebettete Svelte-Komponente</h1>
+
+  <!-- Hier wird die Komponente verwendet -->
+  <div>
+    <diffie-hellman-colors></diffie-hellman-colors>
+    <diffie-hellman-numbers></diffie-hellman-numbers>
+  </div>
+  <!-- Dein kompiliertes Bundle -->
+  <script charset="UTF-8" src="color.js"></script>
+  <script charset="UTF-8" src="number.js"></script>
+</body>
+</html>
